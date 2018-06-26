@@ -10,7 +10,8 @@ class App extends Component {
 			locationOfStars: [],
 			mapOfEdges: [],
 			skyHeight: undefined,
-			skyWidth: undefined
+			skyWidth: undefined,
+			loop: false,
 		};
 
 		this.clickedHercules = this.clickedHercules.bind(this);
@@ -136,21 +137,22 @@ class App extends Component {
 		window.removeEventListener('resize', this.fitStageIntoParentContainer.bind(this));
 	}
 
-	componentWillMount() {
-		this.state.skyWidth ? this.fitStageIntoParentContainer() : "";
-	}
-
 	fitStageIntoParentContainer() {
 		let parent = document.getElementById("leftPanelContainer");
 		let padding = 50;
 
 		let height = parent.clientHeight - padding;
-		let width = parent.clientWidth - padding;
+		let width = parent.scrollWidth - padding;
 
-		setTimeout(function() { this.setState({skyHeight: height, skyWidth: width}); }.bind(this), 1);
+		let topContainer = document.getElementById("topContainer");
+		let footer = document.getElementById("footer");
+		this.setState({skyHeight: height, skyWidth: width});
+
+		(topContainer.scrollWidth > footer.scrollWidth) ? this.setState({loop: true}) : this.setState({loop: false});
 	}
 
 	getSkyBox(){
+		this.state.loop ? this.fitStageIntoParentContainer() : "";
 		return(
 			<Sky className='skyBox' stageHeight={this.state.skyHeight}
 				 stageWidth={this.state.skyWidth}
@@ -165,7 +167,7 @@ class App extends Component {
 			<div className="app">
 				<div className="appContainer">
 					<div className="radioContainer">
-						<div className="topContainer">
+						<div className="topContainer" id="topContainer">
 							<div id="leftPanelContainer" className="leftPanelContainer">
 								<div id="skyContainer">
 									{this.state.skyHeight ? this.getSkyBox() : ""}
@@ -181,7 +183,7 @@ class App extends Component {
 
 							</div>
 						</div>
-						<div className="footer">
+						<div className="footer" id="footer">
 							<div className="titlebox">
 								<div className="title">
 									<h1>Constellation Maker 3005</h1>

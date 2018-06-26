@@ -20,7 +20,7 @@ html, body {
 .topContainer {
     display: flex;
     flex-direction: row;
-    flex: 15;
+    flex: 1000;
 }
 
 .appContainer {
@@ -94,7 +94,7 @@ html, body {
     background-color: purple;
     padding: 8%;
     padding-left: 20px;
-    flex: 1;
+    flex: 3;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     display: flex;

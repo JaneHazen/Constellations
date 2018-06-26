@@ -211,9 +211,6 @@ class Sky extends React.Component {
 	}
 
 	render() {
-		console.log("!!!");
-		console.log(this.state.locationOfStars);
-		console.log(this.state.mapOfEdges);
 		return (
 			<div>
 				<Stage id="skyStage" height={this.state.stageHeight} width={this.state.stageWidth} x={this.state.scale} y={this.state.scale} style={{
