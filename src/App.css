@@ -20,7 +20,7 @@ html, body {
 .topContainer {
     display: flex;
     flex-direction: row;
-    flex: 10;
+    flex: 15;
 }
 
 .appContainer {
@@ -40,7 +40,7 @@ html, body {
 .buttonContainer {
     display: flex;
     flex-direction: column;
-    padding-top: 8vh;
+    padding-top: 2vh;
 }
 
 .buttonContainer button {
