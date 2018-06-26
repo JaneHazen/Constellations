@@ -1,13 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Monofett');
+@import url('https://fonts.googleapis.com/css?family=Teko');
 
 html, body {
     height: 100%;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
+.radioContainer {
+    padding: 10px;
+    background-color: white;
+    border-radius: 30px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
 
+.topContainer {
+    display: flex;
+    flex-direction: row;
+    flex: 10;
+}
 
+.appContainer {
+    background-color: #1D4BB7;
+    padding: 30px;
+    height: 100vh;
+}
 
+#leftPanelContainer {
+    background-color: #FF6D0C;
+    padding-top: 20px;
+    border-top-left-radius: 30px;
+    flex: 1;
 
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8vh;
+}
+
+.buttonContainer button {
+    border-radius: 50%;
+    height: 12vh;
+    outline: none;
+    margin: 2vh;
+    margin-top: 0;
+    font-size: 24px;
+    font-family: 'Teko', sans-serif;
+    cursor: pointer;
+    text-align: center;
+    border: 4px solid white;
+    background-color: #FF6D0C;
+    box-shadow: 0 9px purple;
+}
+
+#skyContainer {
+    border-top-left-radius:30px;
+}
+.rightPanelContainer {
+    border-top-right-radius:30px;
+    background-color: #EDCF49;
+}
+
+.title h1 {
+    font-family: 'Monofett', cursive;
+    color: white;
+    text-align: left;
+    object-fit: fill;
+    font-size: 4vw;
+    flex: 2;
+}
+.footer {
+    background-color: purple;
+    padding: 8%;
+    padding-left: 20px;
+    flex: 1;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    display: flex;
+}
 
 
