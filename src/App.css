@@ -8,10 +8,10 @@ html, body {
 }
 
 .radioContainer {
-    padding: 10px;
     background-color: white;
     border-radius: 30px;
-    height: 90vh;
+    padding: 10px;
+    height: 97.4vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -25,7 +25,6 @@ html, body {
 
 .appContainer {
     background-color: #1D4BB7;
-    padding: 30px;
     height: 100vh;
 }
 
